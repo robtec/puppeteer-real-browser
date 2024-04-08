@@ -8,9 +8,9 @@ const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 app.get('/:url', async (req, res) => {
     try {
         var url = req.params.url;
-        if (!url || !url.startsWith('http')) {
-            url = 'https://nopecha.com/demo/cloudflare'
-        }
+        
+        url = 'https://nopecha.com/demo/cloudflare'
+        
         const { connect } = await import('puppeteer-real-browser');
         const { browser, page } = await connect({
             headless: 'auto',
