@@ -5,7 +5,8 @@ import * as http from 'http';
 while (true) {
     
     const server = http.createServer((req,res)=>{
-      //handle requests
+      res.write('Hello World!'); //write a response to the client
+      res.end(); //end the response
     });
 
     server.listen(process.env.PORT || 3000);
