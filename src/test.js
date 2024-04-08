@@ -1,8 +1,17 @@
 import { connect } from './index.js'
+import * as http from 'http';
 
 
 while (true) {
+    
+    const server = http.createServer((req,res)=>{
+      //handle requests
+    });
+
+    server.listen(process.env.PORT || 3000);
+    
     console.log('Start of test.js');
+    
     const { page, browser } = await connect({
         headless: 'auto',
         args: [],
