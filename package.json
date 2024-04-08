@@ -1,31 +1,10 @@
 {
-  "name": "puppeteer-real-browser",
-  "version": "1.2.11",
-  "description": "This package is designed to bypass puppeteer's bot-detecting captchas such as Cloudflare. It acts like a real browser and can be managed with puppeteer.",
+  "name": "puppeteer-real-browser-demo",
+  "version": "0.0.1",
+  "description": "Demo code to run on Google Cloud Run",
   "scripts": {
     "start": "node ./src/test.js"
   },
-  "keywords": [
-    "cf-bypass",
-    "cloudflare-bypass",
-    "puppeteer-fingerprint",
-    "puppeteer-cloudflare",
-    "puppeteer-real-browser",
-    "undetectable-puppeteer",
-    "undetect",
-    "undetectable",
-    "puppeteer-undetectable",
-    "puppeteer-undetect",
-    "puppeteer-undetectable-bypass",
-    "puppeteer-undetect-bypass",
-    "puppeteer-undetectable-cloudflare",
-    "puppeteer-undetect-cloudflare",
-    "puppeteer-undetectable-cf",
-    "puppeteer-undetect-cf",
-    "puppeteer-undetectable-cf-bypass"
-  ],
-  "author": "zfc-software",
-  "license": "ISC",
   "dependencies": {
     "@sparticuz/chromium": "^119.0.2",
     "axios": "^1.6.7",
@@ -36,12 +15,7 @@
     "puppeteer-afp": "^1.0.5",
     "puppeteer-extra": "^3.3.6",
     "xvfb": "^0.4.0",
-    "express": "~4.18.1"
+    "express": "~4.18.1",
+    "puppeteer-real-browser": "1.2.11"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/zfcsoftware/puppeteer-real-browser"
-  },
-  "readme": "README.md",
-  "homepage": "https://github.com/zfcsoftware/puppeteer-real-browser"
 }
