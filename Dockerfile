@@ -26,8 +26,6 @@ COPY package*.json ./
 # Install Node.js dependencies
 RUN npm install
 
-RUN npm install puppeteer-real-browser
-
 # Copy the rest of the application code
 COPY . .
 
