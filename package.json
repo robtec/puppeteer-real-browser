@@ -6,16 +6,7 @@
     "start": "node ./src/test.js"
   },
   "dependencies": {
-    "@sparticuz/chromium": "^119.0.2",
-    "axios": "^1.6.7",
-    "chrome-launcher": "^1.1.0",
-    "chrome-remote-interface": "^0.33.0",
-    "cli-color": "^2.0.3",
-    "puppeteer": "^21.11.0",
-    "puppeteer-afp": "^1.0.5",
-    "puppeteer-extra": "^3.3.6",
-    "xvfb": "^0.4.0",
     "express": "~4.18.1",
     "puppeteer-real-browser": "1.2.11"
-  },
+  }
 }
