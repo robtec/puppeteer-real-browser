@@ -22,13 +22,16 @@ app.get('/:url', async (req, res) => {
             connectOption: {},
             tf: true,
         });
-        await page.goto(req.params.url, {
+        
+        await page.goto(url, {
             timeout: 0,
         });
+        
         await sleep(5000);
         const data = await page.content();
         await browser.close();
         res.send(data);
+        
     } catch (err) {
         res.send(err.message)
     }
