@@ -5,11 +5,10 @@ app.listen(port, () => { console.log(`Server running on port ${port}`); })
 
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-app.get('/:url', async (req, res) => {
+app.get('/', async (req, res) => {
     try {
-        var url = req.params.url;
         
-        url = 'https://nopecha.com/demo/cloudflare'
+        var url = 'https://nopecha.com/demo/cloudflare'
         
         const { connect } = await import('puppeteer-real-browser');
         const { browser, page } = await connect({
@@ -23,9 +22,17 @@ app.get('/:url', async (req, res) => {
             tf: true,
         });
         
+        console.log('Connected to browser');
+        
         await page.goto(url, {
-            timeout: 0,
-        });
+            waitUntil: 'domcontentloaded'
+        })
+        
+        console.log('Navigated to page');
+        
+        await page.waitForSelector('.link_row', {
+            timeout: 60000
+        })
         
         await sleep(5000);
         const data = await page.content();
